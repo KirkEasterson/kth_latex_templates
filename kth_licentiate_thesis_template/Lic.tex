@@ -1,0 +1,77 @@
+\title{LicThesis-KTH}
+% please read the enclosed README file for more information 
+
+\documentclass{kthesis}
+
+% the used packages are just examples, you can use your preferred packages instead
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{lmodern}
+\usepackage[latin1]{inputenc}
+\usepackage[swedish, english]{babel}
+%\usepackage{graphics}
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+\usepackage{graphicx} 
+%\usepackage{caption}
+%\usepackage{subcaption}
+%\usepackage{color} 
+%\usepackage{transparent} 
+%\usepackage{bm} % bold math
+%\usepackage{fmtcount}
+%\usepackage{booktabs}
+\usepackage{multirow}
+%\usepackage{url}
+%\usepackage{cite}
+
+%\usepackage[singlelinecheck=off]{caption}
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
+\input{Lic-bibl}
+\begin{document}
+
+\addcontentsline{toc}{chapter}{Note: \\ It is not allowed to "copy and paste" from your papers to your dissertation.} % these are notes and they are not a part of the thesis
+
+\frontmatter
+\maketitle
+\input{abstract_english} % calls the separate document named abstract_english.tex
+\selectlanguage{swedish} % changes language for writing the swedish summary
+\input{summary_swedish} % calls the separate document named summary_swedish.tex
+\selectlanguage{english}
+\clearpage
+\input{acknowledgement} % calls the separate document named acknowledgement.tex
+\clearpage
+
+\setcounter{tocdepth}{2} % used for content layout
+\renewcommand{\contentsname}{Contents (suggestion)} % changes the appearance of Contents
+\tableofcontents
+\clearpage
+
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+\input{abbreviation}
+\clearpage
+
+\mainmatter
+\setcounter{secnumdepth}{3} % used for content layout
+
+\input{Chapter1} % calls the separate document named Chapter1.tex
+\input{Chapter2}
+\input{Chapter3}
+\input{Chapter4}
+\input{Chapter5}
+
+\bibliographystyle{IEEEtran} % this is just an example, other styles can be used as well
+\bibliography{Lic} % calls the separate document named Lic.bbl
+
+%\backmatter % should be used for the actual thesis, separate documents can be added without the numbering, similar to the \frontmatter
+%\appendix{\input{app_papers}}
+\appendix
+\addcontentsline{toc}{chapter}{Summary of the appended papers (only for the collection of papers thesis)} % for template purposes
+\addcontentsline{toc}{chapter}{Appended Papers (only for the collection of papers thesis), for which you need to request copyright for reprinting them in the dissertation} % for template purposes
+
+\end{document}
+\endinput
+

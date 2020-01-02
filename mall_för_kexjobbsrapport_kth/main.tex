@@ -1,0 +1,75 @@
+\documentclass[twoside, openright]{report}
+%% Needs to be here 
+\usepackage{docstyle}
+ 
+\title{Mall för kexjobbsrapport}
+\author{Student 1
+\\
+Student 2}
+ 
+\begin{document}
+\maketitle
+\cleardoublepage
+\selectlanguage{english}
+\begin{abstract}
+\input{abstractEng.tex}
+\end{abstract}
+
+\cleardoublepage
+\selectlanguage{swedish}
+\begin{abstract}
+\input{abstractSwe.tex}
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+%--------------------------------
+% Skriv i de separata filerna för bättre struktur
+%--------------------------------
+
+%--------------------------------
+% Jag har behållit fler subsections som ni kan ta bort. Har kvar dem som inspiration
+%--------------------------------
+
+\newpage
+\chapter{Introduktion}\label{chap:intro}
+\input{chapter1.tex}
+
+\newpage
+\chapter{Teori}\label{chap:teori}
+\input{chapter2.tex}
+
+\newpage
+\chapter{Metoder}\label{chap:metod}
+\input{chapter3.tex}
+
+\newpage
+\chapter{Arbetet}\label{chap:arbete}
+\input{chapter4.tex}
+
+\newpage
+\chapter{Resultat}\label{chap:result}
+\input{chapter5.tex}
+
+\newpage
+\chapter{Diskussion}\label{chap:diss}
+\input{chapter6.tex}  
+
+\newpage
+\chapter{Sammanfattning och framtida arbete}\label{chap:SamFut}
+\input{chapter7.tex}  
+
+\newpage
+\addcontentsline{toc}{chapter}{Litteraturförteckning}
+\printbibliography[title=Litteraturförteckning]
+
+\newpage
+\begin{appendices}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+  \chapter{Titel till appendix}
+  \input{appendixA.tex}
+\end{appendices}
+
+\end{document}

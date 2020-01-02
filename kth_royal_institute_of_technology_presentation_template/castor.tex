@@ -1,0 +1,81 @@
+\documentclass[aspectratio=1610]{beamer}
+
+\usetheme{KTH}
+
+% remove this if using XeLaTeX or LuaLaTeX
+\usepackage[utf8]{inputenc}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{lipsum}
+\usepackage{minted}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{algorithm,algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[export]{adjustbox}
+
+\begin{document}
+
+%------------------------------------------------
+\begin{frame}[noframenumbering,plain]
+
+  \vspace{0.02\textheight}
+  
+\begin{columns}[]
+\column{37em}
+\Large{\centerline{\usebeamercolor[fg]{title}Title}}
+
+\vspace{0.1\textheight}
+
+\small{\centerline{Firstname Surname}}
+\scriptsize{\centerline{\tt firstname.surname@kth.se}}
+\scriptsize{\centerline{}}
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\usebackgroundtemplate{\vbox{\null\vspace{3mm}
+  \hspace{3mm}\pgfuseimage{kthlogosmall}\par
+  \vspace{72mm}\hbox{\hspace{-75mm}\pgfuseimage{kthplatta}}}}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Software and Computer Systems (SCS)}
+\begin{columns}
+\column{37em}
+\hspace*{2cm}\includegraphics[width=10cm]{figs/scs.png}
+\end{columns}
+\end{frame}
+
+
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Collaborative Data Science Platform}
+\begin{columns}
+\column{37em}
+\begin{itemize}\itemsep1em
+  \justifying
+  \item A \textcolor{Ocean}{shared platform} for all \textcolor{TextGreen}{data science} contributors
+  \item Open data science \textcolor{Ocean}{tools at scale}
+  \item \textcolor{TextGreen}{Self-service} access to \textcolor{Ocean}{data}, \textcolor{Ocean}{storage}, and \textcolor{Ocean}{compute}
+  \item A complete \textcolor{darkred}{pipeline} from data to deployment
+  \item Collaborative \textcolor{Ocean}{development tools}
+  \item \textcolor{Ocean}{Management} and \textcolor{Ocean}{reproducibility}
+\end{itemize}
+\end{columns}
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\begin{columns}
+\column{37em}
+\vspace{1cm}
+\Huge{\centerline{\usebeamercolor[fg]{title}Thanks!}}
+\end{columns}
+\end{frame}
+
+\end{document}

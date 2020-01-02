@@ -1,0 +1,39 @@
+
+%% Language and font encodings
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, swedish]{babel}
+
+%% Front page
+\usepackage{multirow}
+
+\usepackage{lipsum}
+\pagestyle{headings}
+
+%% timeline
+\usepackage{tikz}
+\usetikzlibrary{snakes}
+
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{float}
+\usepackage[normalem]{ulem}
+
+% Reference packages
+\usepackage[backend = biber, style = ieee]{biblatex}
+\addbibresource{references.bib}
+
+%% Abstract at top of page
+\usepackage{etoolbox}
+\patchcmd{\abstract}{\null\vfil}{}{}{}
+
+%% Appendix
+\usepackage[titletoc,toc,title]{appendix}
+\renewcommand\appendixtocname{Bilagor}
